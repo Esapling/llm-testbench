@@ -1,0 +1,1490 @@
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.FFFF..FF.
+======================================================================
+FAIL: test_fib4 (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fib4.py", line 42, in test_fib4
+    self.assertEqual(fib4(10), 54)
+AssertionError: 104 != 54
+
+======================================================================
+FAIL: test_fibfib (fibfib.TestFibFib)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/fibfib.py", line 27, in test_fibfib
+    self.assertEqual(fibfib(2), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_make_palindrome (is_palindrome.TestMakePalindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/is_palindrome.py", line 32, in test_make_palindrome
+    self.assertEqual(make_palindrome("cat"), "catac")
+AssertionError: 'catc' != 'catac'
+- catc
++ catac
+?    +
+
+
+======================================================================
+FAIL: test_minPath (min_path.TestMinPath)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/min_path.py", line 37, in test_minPath
+    self.assertEqual(minPath([[1, 2], [3, 4]]), 8)
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_find_zero (poly.TestFindZero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/poly.py", line 65, in test_find_zero
+    self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
+AssertionError: 2.999999523162842 != 1.0 within 5 places (1.9999995231628418 difference)
+
+======================================================================
+FAIL: test_sort_third (sort_third.TestSortThird)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/hard/sort_third.py", line 32, in test_sort_third
+    self.assertEqual(sort_third([9, 6, 3, 4, 8, 5, 2]), [3, 6, 9, 4, 8, 5, 2])
+AssertionError: Lists differ: [2, 6, 3, 4, 8, 5, 9] != [3, 6, 9, 4, 8, 5, 2]
+
+First differing element 0:
+2
+3
+
+- [2, 6, 3, 4, 8, 5, 9]
+?  ^     ^           ^
+
++ [3, 6, 9, 4, 8, 5, 2]
+?  ^     ^           ^
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=6)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....FE.
+======================================================================
+ERROR: test_specialFilter (special_flter.TestSpecialFilter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/special_flter.py", line 17, in test_specialFilter
+    self.assertEqual(specialFilter([], []), [])
+TypeError: specialFilter() takes 1 positional argument but 2 were given
+
+======================================================================
+FAIL: test_compare_one (compare_one.TestCompareOne)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/compare_one.py", line 21, in test_compare_one
+    self.assertEqual(compare_one("abc", "axc"), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_sort_array (sort_array.TestSortArray)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/medium/sort_array.py", line 38, in test_sort_array
+    self.assertEqual(sort_array([1, 2, 3, 4]), [4, 3, 2, 1])
+AssertionError: Lists differ: [1, 2, 3, 4] != [4, 3, 2, 1]
+
+First differing element 0:
+1
+4
+
+- [1, 2, 3, 4]
++ [4, 3, 2, 1]
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
+.F.....F.E
+======================================================================
+ERROR: test_sum_to_n (sum_to_n.TestSumToN)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 31, in test_sum_to_n
+    self.assertEqual(sum_to_n(0), 0)
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/sum_to_n.py", line 19, in sum_to_n
+    raise ValueError("Input must be a positive integer")
+ValueError: Input must be a positive integer
+
+======================================================================
+FAIL: test_double_the_difference (double_the_difference.TestDoubleTheDifference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/double_the_difference.py", line 27, in test_double_the_difference
+    self.assertEqual(double_the_difference([-1, -2, -3]), [4, 2, 0])
+AssertionError: Lists differ: [0, 2, 4] != [4, 2, 0]
+
+First differing element 0:
+0
+4
+
+- [0, 2, 4]
+?  ^     ^
+
++ [4, 2, 0]
+?  ^     ^
+
+
+======================================================================
+FAIL: test_select_words (select_words.TestSelectWords)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_gemini_flash/easy/select_words.py", line 23, in test_select_words
+    self.assertEqual(select_words("apple Ant ball Bee"), "apple Ant ball Bee")
+AssertionError: 'apple ball' != 'apple Ant ball Bee'
+- apple ball
++ apple Ant ball Bee
+
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=2, errors=1)
