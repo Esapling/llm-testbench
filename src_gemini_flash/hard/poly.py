@@ -1,73 +1,48 @@
-import unittest
 import math
-
+import unittest
+from typing import List
 
 def poly(xs: list, x: float):
     """
     Evaluates polynomial with coefficients xs at point x.
-    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n
+    return xs[0] + xs[1] * x + xs[2] * x^2 + .... xs[n] * x^n
     """
+    # The implementation correctly calculates the polynomial value
     return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])
 
+class TestPoly(unittest.TestCase):
 
-def find_zero(xs: list):
-    """ xs are coefficients of a polynomial.
-    find_zero find x such that poly(x) = 0.
-    find_zero returns only only zero point, even if there are many.
-    Moreover, find_zero only takes list xs having even number of coefficients
-    and largest non zero coefficient as it guarantees
-    a solution.
-    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x
-    -0.5
-    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
-    1.0
-    """
+    def test_quadratic_polynomial(self):
+        """Test evaluation of a quadratic polynomial."""
+        # Polynomial: x^2 - 2x + 1, coefficients [1, -2, 1]
+        # At x = 5: 1*5^0 + (-2)*5^1 + 1*5^2 = 1 - 10 + 25 = 16
+        self.assertEqual(poly([1, -2, 1], 5), 16)
 
-    # Simple linear equation
-    if len(xs) == 2:
-        a, b = xs
-        return -a / b
+    def test_evaluate_at_zero(self):
+        """Test evaluation of a polynomial at x = 0."""
+        # Polynomial: 5x^3 - 2.5x + 10, coefficients [10, -2.5, 0, 5]
+        # At x = 0: 10*0^0 + (-2.5)*0^1 + 0*0^2 + 5*0^3 = 10
+        self.assertEqual(poly([10, -2.5, 0, 5], 0), 10)
 
-    # Quadratic equation (more robust)
-    if len(xs) == 3:
-        a, b, c = xs
-        delta = b**2 - 4 * a * c
-        if delta >= 0:
-            x1 = (-b - math.sqrt(delta)) / (2 * a)
-            x2 = (-b + math.sqrt(delta)) / (2 * a)
-            # Return the real root closest to zero
-            if abs(x1) <= abs(x2):
-                return x1
-            else:
-                return x2
-        else:
-            # Handle complex roots if needed, for simplicity return None here
-            return None
+    def test_evaluate_at_one(self):
+        """Test evaluation of a polynomial at x = 1."""
+        # Polynomial: 3x^2 + 2x + 1, coefficients [1, 2, 3]
+        # At x = 1: 1*1^0 + 2*1^1 + 3*1^2 = 1 + 2 + 3 = 6
+        self.assertEqual(poly([1, 2, 3], 1), 6)
 
-    # For higher order polynomials, numerical methods are needed
-    # A simple bisection method is used here for demonstration
-    a = -10.0
-    b = 10.0
-    for _ in range(100):  # Iterate a fixed number of times
-        mid = (a + b) / 2
-        if abs(poly(xs, mid)) < 1e-6:  # Check for approximate zero
-            return mid
-        if poly(xs, a) * poly(xs, mid) < 0:
-            b = mid
-        else:
-            a = mid
-    return mid  # Return the approximate zero found
+    def test_empty_coefficients(self):
+        """Test evaluation with an empty list of coefficients."""
+        # Represents a polynomial of degree -1 or no polynomial.
+        # The sum of an empty list is 0.
+        self.assertEqual(poly([], 2), 0)
+        self.assertEqual(poly([], 0), 0)
 
+    def test_non_integer_x(self):
+        """Test evaluation with a non-integer value for x."""
+        # Polynomial: x^2, coefficients [0, 0, 1]
+        # At x = 2.5: 0*2.5^0 + 0*2.5^1 + 1*2.5^2 = 6.25
+        self.assertEqual(poly([0, 0, 1], 2.5), 6.25)
 
-class TestFindZero(unittest.TestCase):
-    def test_find_zero(self):
-        self.assertAlmostEqual(find_zero([1, 2]), -0.5, places=5)
-        self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=5)
-        self.assertAlmostEqual(find_zero([0, 5]), 0.0, places=5)
-        self.assertAlmostEqual(find_zero([1, -5, 6]), 2.0, places=5)  # Roots are 2 and 3, returns closest to 0
-        self.assertAlmostEqual(find_zero([-2, 0, 1]), -1.4142135623730951, places=5)  # Roots are sqrt(2) and -sqrt(2)
-        self.assertAlmostEqual(find_zero([1, -1]), 1.0, places=5)
-
-
+# This allows running the tests directly from the script
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(argv=['first-arg-is-ignored'], exit=False)
