@@ -1,0 +1,53 @@
+--- Results for directory: hard ---
+........F..F.........
+======================================================================
+FAIL: test_additional_cases (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_claude_sonnet/hard/fib4.py", line 52, in test_additional_cases
+    self.assertEqual(fib4(9), 52)  # 2 + 4 + 8 + 14 = 28
+AssertionError: 54 != 52
+
+======================================================================
+FAIL: test_larger_values (fib4.TestFib4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_claude_sonnet/hard/fib4.py", line 55, in test_larger_values
+    self.assertEqual(fib4(10), 96)
+AssertionError: 104 != 96
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+FAILED (failures=2)
+
+
+--- Results for directory: middle ---
+...................F.......................................
+======================================================================
+FAIL: test_mixed_spaces (fix_spaces.TestFixSpaces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/sapling/Desktop/softQualtiyProject/src_claude_sonnet/middle/fix_spaces.py", line 60, in test_mixed_spaces
+    self.assertEqual(fix_spaces(" Hello  World   !"), "_Hello-World-!")
+AssertionError: '_Hello__World-!' != '_Hello-World-!'
+- _Hello__World-!
+?       ^^
++ _Hello-World-!
+?       ^
+
+
+----------------------------------------------------------------------
+Ran 59 tests in 0.002s
+
+FAILED (failures=1)
+
+
+--- Results for directory: easy ---
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK
+
+
