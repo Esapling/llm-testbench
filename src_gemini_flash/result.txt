@@ -75,7 +75,7 @@ First differing element 0:
 + ['D', 'D+', 'D+', 'C', 'C-', 'C+', 'C', 'C-', 'D+', 'D', 'E']
 
 ----------------------------------------------------------------------
-Ran 49 tests in 0.002s
+Ran 49 tests in 0.003s
 
 FAILED (failures=4)
 
@@ -139,7 +139,7 @@ First extra element 0:
 + ['PYTHON']
 
 ----------------------------------------------------------------------
-Ran 51 tests in 0.001s
+Ran 51 tests in 0.002s
 
 FAILED (failures=1)
 
