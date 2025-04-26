@@ -1,0 +1,3 @@
+Total directories tested: 3
+Directories with failures: 2
+Total test filed test cases: 3
