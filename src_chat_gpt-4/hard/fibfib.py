@@ -1,17 +1,27 @@
-def fibfib(n: int):
-    seq = [0, 0, 1]
-    if n < 3:
-        return seq[n]
-    for i in range(3, n+1):
-        seq.append(seq[-1] + seq[-2] + seq[-3])
-    return seq[n]
-
 import unittest
 
-class TestFibFib(unittest.TestCase):
-    def test_fibfib1(self):
+def fibfib(n: int):
+    """Compute the n-th element of the fibfib sequence."""
+    a, b, c = 0, 0, 1
+    if n == 0:
+        return a
+    elif n == 1:
+        return b
+    elif n == 2:
+        return c
+    for _ in range(3, n + 1):
+        a, b, c = b, c, a + b + c
+    return c
+
+class Test(unittest.TestCase):
+    def test_basic(self):
         self.assertEqual(fibfib(1), 0)
-    def test_fibfib5(self):
+    def test_example(self):
         self.assertEqual(fibfib(5), 4)
-    def test_fibfib8(self):
+    def test_large(self):
         self.assertEqual(fibfib(8), 24)
+    def test_zero(self):
+        self.assertEqual(fibfib(0), 0)
+
+if __name__ == "__main__":
+    unittest.main()
