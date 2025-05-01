@@ -1,3 +1,9 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
 def numerical_letter_grade(grades):
     """It is the last week of the semester and the teacher has to give the grades
     to students. The teacher has been making her own algorithm for grading.

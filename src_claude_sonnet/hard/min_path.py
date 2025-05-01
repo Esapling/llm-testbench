@@ -1,3 +1,9 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
 def minPath(grid, k):
     """
     Given a grid with N rows and N columns (N >= 2) and a positive integer k,

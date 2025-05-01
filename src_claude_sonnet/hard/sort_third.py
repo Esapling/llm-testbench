@@ -1,3 +1,9 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
 def sort_third(l: list):
     """This function takes a list l and returns a list l' such that
     l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal

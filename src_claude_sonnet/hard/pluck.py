@@ -1,3 +1,9 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
 def pluck(arr):
     """
     Given an array representing a branch of a tree that has non-negative integer nodes
