@@ -1,3 +1,9 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
 def largest_divisor(n: int) -> int:
     """For a given number n, find the largest number that divides n evenly, smaller than n
     >>> largest_divisor(15)

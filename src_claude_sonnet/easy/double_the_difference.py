@@ -1,9 +1,3 @@
-"""
-/* @Authors
-* Student Names: Enes Fidan, Yunus Emre Bayraktar 
-* Student IDs: 150200713, 150200020 
-*/
-"""
 def double_the_difference(lst):
     '''
     Given a list of numbers, return the sum of squares of the numbers
