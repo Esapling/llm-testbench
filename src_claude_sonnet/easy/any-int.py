@@ -1,3 +1,10 @@
+"""
+/* @Authors
+* Student Names: Enes Fidan, Yunus Emre Bayraktar 
+* Student IDs: 150200713, 150200020 
+*/
+"""
+
 def any_int(x, y, z):
     '''
     Create a function that takes 3 numbers.
