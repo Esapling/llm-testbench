@@ -53,6 +53,17 @@ class TestDoubleTheDifference(unittest.TestCase):
         """Test with a list containing only even numbers and negative numbers."""
         self.assertEqual(double_the_difference([2, 4, -6, -8, 0]), 0)
 
+    #------------ Phase 2 Tests ------------
+    
+    def test_all_zero(self):
+        self.assertEqual(double_the_difference([0, 0, 0]), 0)
+        
+    def test_with_strings(self):
+        self.assertEqual(double_the_difference([1, 'a', 3, 4]), 10)
+    
+    def test_with_boolean(self):
+        self.assertRaises(TypeError, double_the_difference, [True, False, 1]) 
+
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

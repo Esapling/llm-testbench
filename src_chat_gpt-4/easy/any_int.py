@@ -24,9 +24,8 @@ class TestAnyInt(unittest.TestCase):
     def test_string_inputs(self):
         self.assertFalse(any_int("5", 2, 7))
     
-    def test_boolean_values(self):
-        self.assertFalse(any_int(True, False, 1))
-        self.assertFalse(any_int(1, 0, True))
+    def test_boolean_inputs(self):
+        self.assertRaises(TypeError, any_int, True, False, 1)
     
     def test_large_numbers(self):
         self.assertTrue(any_int(1000000, 2000000, 3000000))
