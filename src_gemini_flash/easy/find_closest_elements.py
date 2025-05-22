@@ -62,6 +62,27 @@ class TestFindClosestElements(unittest.TestCase):
         self.assertEqual(find_closest_elements([10.0, 20.0]), (10.0, 20.0))
         self.assertEqual(find_closest_elements([5.5, 5.1]), (5.1, 5.5))
 
+        #------------ Phase 2 Tests ------------
+    
+    def test_empty_list(self):
+        with self.assertRaises(ValueError):
+            find_closest_elements([])
+    
+    def test_single_element(self):
+        with self.assertRaises(ValueError):
+            find_closest_elements([1.0])
+    
+    def test_large_numbers(self):
+        self.assertEqual(find_closest_elements([1000000, 1000001, 1000002]), (1000000, 1000001))
+       
+    def test_not_enough_numeric(self):
+        with self.assertRaises(TypeError):
+            find_closest_elements([1, "a"])
+        with self.assertRaises(TypeError):
+            find_closest_elements(["b", 'a', "cat", "dog"])
+
+    def test_mixed_types(self):
+        self.assertEqual(find_closest_elements([1, "a", 3]), (1, 3))
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':
