@@ -31,6 +31,21 @@ class TestAnyInt(unittest.TestCase):
     
     def test_all_zero(self):
         self.assertTrue(any_int(0, 0, 0))
+        
+        #------------ Phase 2 Tests ------------
+    
+    def test_string_inputs(self):
+        self.assertFalse(any_int("5", 2, 7))
+    
+    def test_boolean_values(self):
+        self.assertFalse(any_int(True, False, 1))
+        self.assertFalse(any_int(1, 0, True))
+    
+    def test_large_numbers(self):
+        self.assertTrue(any_int(1000000, 2000000, 3000000))
+        self.assertFalse(any_int(1000000, 2000000, 4000000))
+        self.assertTrue(any_int(-1000000, -2000000, -3000000))
+        self.assertFalse(any_int(-1000000, -2000000, -4000000))
 
 if __name__ == "__main__":
     unittest.main()
