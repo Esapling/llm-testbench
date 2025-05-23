@@ -59,7 +59,7 @@ class TestSelectWords(unittest.TestCase):
         self.assertEqual(select_words("", 2), [])
     
     def test_single_word(self):
-        self.assertEqual(select_words("Consonants", 6), ["Consonants"])
+        self.assertEqual(select_words("Consonants", 7), ["Consonants"])
     
     def test_zero_consonants(self):
         self.assertEqual(select_words("a e i", 0), ["a", "e", "i"])
@@ -69,6 +69,27 @@ class TestSelectWords(unittest.TestCase):
     
     def test_no_matching_words(self):
         self.assertEqual(select_words("abc def ghi", 10), [])
+
+   #------------ Phase 2 Tests ------------
+    def test_n_is_greater_than_word_length(self):
+        self.assertEqual(select_words("abc", 5), [])
+        self.assertEqual(select_words("Hello Programming world with Python", 30), [])
+    def test_n_is_negative(self):
+        self.assertEqual(select_words("Hello world", -1), [])
+        self.assertEqual(select_words("Software quality lecture is great", -2), [])
+
+    def test_inputs_with_all_matching_consonants(self):
+        self.assertEqual(select_words("abcd xayz tlmu", 3), ["abcd", "xayz", "tlmu"])
+
+    def test_inputs_with_no_consonants(self):
+        self.assertEqual(select_words("aeiou", 0), ["aeiou"])
+        self.assertEqual(select_words("AEIOU", 3), [])    
+
+    def test_extremely_long_string(self):
+        long_string = "a" * 100 + "b" * 100 + "c" * 100
+        self.assertEqual(select_words(long_string, 200), ["a" * 100 + "b" * 100 + "c" * 100])
+        # self.assertEqual(select_words(long_string, 2000), [])
+        # self.assertEqual(select_words(long_string, 1500), ["a" * 1000 + "b" * 1000])
 
 if __name__ == "__main__":
     unittest.main()
