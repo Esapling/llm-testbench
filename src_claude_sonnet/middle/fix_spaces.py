@@ -65,5 +65,16 @@ class TestFixSpaces(unittest.TestCase):
     def test_mixed_spaces(self):
         self.assertEqual(fix_spaces(" Hello  World   !"), "_Hello-World-!")
 
+    # --------------- Phase 2 Tests --------------
+
+    def test_only_spaces(self):
+        self.assertEqual(fix_spaces('   '), '-')
+        self.assertEqual(fix_spaces('      '), '-')
+        self.assertEqual(fix_spaces(' '), '_')
+    
+    def test_empty_string(self):
+        self.assertEqual(fix_spaces(''), '')
+    
+
 if __name__ == "__main__":
     unittest.main()

@@ -38,5 +38,18 @@ class TestFixSpaces(unittest.TestCase):
     def test_only_spaces(self):
         self.assertEqual(fix_spaces("   "), "-")
 
+    # --------------- Phase 2 Tests --------------
+
+    def test_leading_spaces(self):
+        self.assertEqual(fix_spaces('   Hello'), '-Hello')
+        self.assertEqual(fix_spaces('  Hello World'), '-Hello_World')
+    
+    def test_trailing_spaces(self):
+        self.assertEqual(fix_spaces('Hello   '), 'Hello-')
+        self.assertEqual(fix_spaces('Hello World  '), 'Hello_World-')
+
+    def test_empty_string(self):
+        self.assertEqual(fix_spaces(''), '')
+    
 if __name__ == "__main__":
     unittest.main()
