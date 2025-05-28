@@ -35,5 +35,33 @@ class TestChangeBase(unittest.TestCase):
         with self.assertRaises(ValueError):
             change_base(10, 11)
 
+    # ----------- Phase 2 Tests -----------
+    
+    def test_large_numbers(self):
+        self.assertEqual(change_base(1000000, 2), '11110100001001000000')
+         
+    def test_negative_numbers(self):
+        with self.assertRaises(ValueError):
+            change_base(-100, 5)
+    
+    def test_floating_point_input(self):
+        with self.assertRaises(TypeError):
+            change_base(10.5, 2)
+        
+    def test_non_integer_input(self):
+        with self.assertRaises(TypeError):
+            change_base("abc!", 6)
+        with self.assertRaises(TypeError):
+            change_base([10], 2)
+       
+    def test_zero_base(self):
+        with self.assertRaises(ValueError):
+            change_base(100, 0)
+            
+    def test_base_one(self):
+        with self.assertRaises(ValueError):
+            change_base(100, 1)
+    
+
 if __name__ == "__main__":
     unittest.main()

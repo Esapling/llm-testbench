@@ -52,5 +52,19 @@ class TestCompareOne(unittest.TestCase):
     def test_invalid_string(self):
         self.assertIsNone(compare_one("abc", 1))
 
+    # ---------- Phase 2 Tests ----------
+        
+    def test_empty_strings(self):
+        self.assertEqual(compare_one("", ""), None)
+        self.assertEqual(compare_one("", 5), 5)
+        
+    def test_dot_comma_type_mixed(self):
+        self.assertEqual(compare_one("0", 0), None)
+        self.assertEqual(compare_one("1,000", "1000"), "1000")
+        self.assertEqual(compare_one("1.000", 1050), 1050)
+        self.assertEqual(compare_one("1.000", "1000"), "1000")
+        self.assertEqual(compare_one(1234.56, "1234.56"), None)
+        self.assertEqual(compare_one("1,234,567", "1234567"), None)
+
 if __name__ == "__main__":
     unittest.main()
