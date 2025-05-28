@@ -48,5 +48,9 @@ class TestSumToN(unittest.TestCase):
         # This test assumes returning 0 for negative inputs
         self.assertEqual(sum_to_n(-5), 0)  # Alternatively, could raise an exception
 
+      #----------- Phase 2 Tests -----------
+    def test_large(self):
+        self.assertEqual(sum_to_n(10000000), 50000005000000)
+    
 if __name__ == "__main__":
     unittest.main()

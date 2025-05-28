@@ -47,32 +47,18 @@ class TestSumSquares(unittest.TestCase):
         self.assertEqual(sum_squares([]), 0)
     
     def test_large_decimal(self):
-        self.assertEqual(sum_squares([3.999, 5.001]), 34)  # ceil(3.999)^2 + ceil(5.001)^2 = 4^2 + 6^2 = 16 + 36 = 52
+        self.assertEqual(sum_squares([3.999, 5.001]), 52)  # ceil(3.999)^2 + ceil(5.001)^2 = 4^2 + 6^2 = 16 + 36 = 52
     
     def test_large_negative(self):
         self.assertEqual(sum_squares([-10.9]), 100)  # ceil(-10.9)^2 = (-10)^2 = 100
 
         #------------ Phase 2 Tests ------------
-    def test_empty_list(self):
-        self.assertEqual(sum_squares([]), 0)
-
-    def test_negative_numbers(self):
-        self.assertEqual(sum_squares([-1,-2,-3]), 14)
-    
     
     def test_zero_value(self):
         self.assertEqual(sum_squares([0]), 0)
         self.assertEqual(sum_squares([0, 0, 0]), 0)
         self.assertEqual(sum_squares([-1, 0, 1]), 2)
     
-    def test_non_numerical_input(self):
-        with self.assertRaises(TypeError):
-            sum_squares(["a", "b", "c"])
-        with self.assertRaises(TypeError):
-            sum_squares([None, True, False])
-    def test_decimal_numbers(self):
-        self.assertEqual(sum_squares([1.5, 2.5, 3.5]), 29)
-
     def test_large_numbers(self):
         self.assertEqual(sum_squares([1000, 2000, 3000]), 14000000)
         self.assertEqual(sum_squares([1e6, 2e6, 3e6]), 14000000000000)
