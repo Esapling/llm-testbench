@@ -40,7 +40,7 @@ class Test(unittest.TestCase):
         self.assertEqual(fib4(20), 73552)
     
     def test_negative_n(self):
-        with self.assertRaises(IndexError):
+        with self.assertRaises(ValueError):
             fib4(-1)
             
     def test_non_integer_n(self):

@@ -42,18 +42,13 @@ class TestFibFib(unittest.TestCase):
 
     def test_fibfib_n_equals_2_and_3(self):
         """Test fibfib for n=2 and n=3, where the product rule starts."""
-        # F(2) = F(1) * F(0) = 1 * 0 = 0
         self.assertEqual(fibfib(2), 0)
-        # F(3) = F(2) * F(1) = 0 * 1 = 0
         self.assertEqual(fibfib(3), 0)
 
     def test_fibfib_larger_n_are_zero(self):
         """Test that fibfib is 0 for n >= 2."""
-        # F(4) = F(3) * F(2) = 0 * 0 = 0
         self.assertEqual(fibfib(4), 0)
-        # F(5) = F(4) * F(3) = 0 * 0 = 0
         self.assertEqual(fibfib(5), 0)
-        # F(10) should also be 0
         self.assertEqual(fibfib(10), 0)
 
 
@@ -63,6 +58,27 @@ class TestFibFib(unittest.TestCase):
             fibfib(-1)
         with self.assertRaises(ValueError):
             fibfib(-5)
+
+    # -------------- Phase 2 Tests -------------
+    
+    def test_n_greater_than_3(self):
+        self.assertEqual(fibfib(4), 2)
+        self.assertEqual(fibfib(6), 7)
+        self.assertEqual(fibfib(10), 44)
+    
+    def test_large_n(self):
+        self.assertEqual(fibfib(20), 17711)
+    
+    def test_non_integer_n(self):
+        with self.assertRaises(TypeError):
+            fibfib(5.5)
+        with self.assertRaises(TypeError):
+            fibfib("string")
+        with self.assertRaises(TypeError):
+            fibfib([1, 2, 3])
+        with self.assertRaises(TypeError):
+            fibfib(None)
+
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':
