@@ -81,6 +81,22 @@ class TestFib4(unittest.TestCase):
         # fib4(10) = 8+14+28+54 = 104
         self.assertEqual(fib4(10), 104)
 
+    # -------------- Phase 2 Tests -------------
+
+    def test_negative_n(self):
+        with self.assertRaises(IndexError):
+            fib4(-1)
+            
+    def test_non_integer_n(self):
+        with self.assertRaises(TypeError):
+            fib4(5.5)
+        with self.assertRaises(TypeError):
+            fib4("string")
+        with self.assertRaises(TypeError):
+            fib4([1, 2, 3])
+        with self.assertRaises(TypeError):
+            fib4(None)
+
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
