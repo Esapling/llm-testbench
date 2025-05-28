@@ -40,7 +40,7 @@ class TestStringXOR(unittest.TestCase):
         self.assertEqual(string_xor('0000', '0000'), '0000')
     
     def test_different_length_strings(self):
-        self.assertEqual(string_xor('1', '0101'), '1100')
+        self.assertEqual(string_xor('1', '0101'), '1101')
         self.assertEqual(string_xor('111', '1'), '110')
         self.assertEqual(string_xor('', '1010'), '1010')
     
@@ -52,6 +52,21 @@ class TestStringXOR(unittest.TestCase):
         self.assertEqual(string_xor('1', '1'), '0')
         self.assertEqual(string_xor('0', '1'), '1')
         self.assertEqual(string_xor('1', '0'), '1')
+        
+    # ----------- Phase 2 Tests -----------
+    
+    def test_empty_strings(self):
+        self.assertEqual(string_xor('', ''), '')
+        self.assertEqual(string_xor('1010', ''), '1010')
+        self.assertEqual(string_xor('', '1100'), '1100')
+    
+    def test_long_strings(self):
+        self.assertEqual(string_xor('11001100', '10101010'), '01100110')
+        self.assertEqual(string_xor('11110000', '00001111'), '11111111')
+        self.assertEqual(string_xor('00000000', '11111111'), '11111111')
+        self.assertEqual(string_xor('10101010', '10101010'), '00000000')
+
+    
 
 if __name__ == "__main__":
     unittest.main()
