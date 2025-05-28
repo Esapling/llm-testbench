@@ -54,9 +54,24 @@ class TestSpecialFilter(unittest.TestCase):
     def test_mixed_cases(self):
         """Test a mix of numbers meeting and not meeting the criteria."""
         self.assertEqual(specialFilter([11, 12, 21, 101, 110, 111]), 3) # 11, 101, 111 meet the criteria
-        self.assertEqual(specialFilter([1, 10, 11, 20, 22, 33, 40, 44, 55]), 2) # 11, 33, 55 meet the criteria
+        self.assertEqual(specialFilter([1, 10, 11, 20, 22, 33, 40, 44, 55]), 3) # 11, 33, 55 meet the criteria
 
+    # ------------- Phase 2 Tests -------------
+    
+    def test_empty_list(self):
+        """ Test with an empty list """
+        self.assertEqual(specialFilter([]), 0)
+        
+    def test_single_element(self):
+        """ Test with a single element that meets the criteria """
+        self.assertEqual(specialFilter([11]), 1)
+        self.assertEqual(specialFilter([12]), 0)
 
+    def test_large_elements(self):
+        """ Test with large numbers to ensure correctness """
+        self.assertEqual(specialFilter([100000000, 999999, 888888]), 1)
+        
+    
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
