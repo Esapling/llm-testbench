@@ -1,16 +1,15 @@
-"""
-/* @Authors
-* Student Names: Enes Fidan, Yunus Emre Bayraktar 
-* Student IDs: 150200713, 150200020 
-*/
-"""
-
 import unittest
-
 def any_int(x, y, z):
-    if not all(isinstance(i, int) for i in (x, y, z)):
+    """
+    Returns True if one of the numbers is the sum of the other two,
+    and all inputs are pure integers (excluding booleans).
+    Otherwise returns False.
+    """
+    # Check that all inputs are pure integers (not bools)
+    if not all(isinstance(i, int) and not isinstance(i, bool) for i in (x, y, z)):
         return False
-    return x + y == z or x + z == y or y + z == x
+
+    return x == y + z or y == x + z or z == x + y
 
 class TestAnyInt(unittest.TestCase):
         def test_examples(self):
@@ -35,6 +34,5 @@ class TestAnyInt(unittest.TestCase):
 
         def test_all_zero(self):
             self.assertTrue(any_int(0, 0, 0))
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()

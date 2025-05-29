@@ -45,8 +45,15 @@ class TestUniqueDigits(unittest.TestCase):
     def test_mixed_numbers(self):
         self.assertEqual(unique_digits([11, 13, 15, 20, 33, 42, 55]), [11, 13, 15, 33, 55])
         
+# ------------- Phase 2 Tests -------------
+
     def test_large_numbers(self):
-        self.assertEqual(unique_digits([11111, 22222, 33333, 55555]), [11111, 33333, 55555])
+        self.assertEqual(unique_digits([1357913579]), [1357913579])
+        self.assertEqual(unique_digits([999999999]), [999999999])
+        
+    def test_sorting_order(self):
+        self.assertEqual(unique_digits([97, 13, 755, 31, 1]), [1, 13, 31, 97, 755])
+        self.assertEqual(unique_digits([99, 77, 55, 33, 11]), [11, 33, 55, 77, 99])
 
 if __name__ == "__main__":
     unittest.main()

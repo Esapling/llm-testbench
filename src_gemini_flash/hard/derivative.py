@@ -61,14 +61,21 @@ class TestDerivative(unittest.TestCase):
 
     def test_derivative_higher_degree(self):
         """Test the derivative of a higher-degree polynomial."""
-        # 4x^3 - 2x^2 + x - 1 -> derivative is 12x^2 - 4x + 1. Coefficients [-1, 1, -2, 4] -> [1, -4, 12]
         self.assertEqual(derivative([-1, 1, -2, 4]), [1, -4, 12])
-        # x^5 -> derivative is 5x^4. Coefficients [0, 0, 0, 0, 0, 1] -> [0, 0, 0, 5]
-        self.assertEqual(derivative([0, 0, 0, 0, 0, 1]), [0, 0, 0, 5]) # error in the test case : should be [0, 0, 0, 0, 5]
+        self.assertEqual(derivative([0, 0, 0, 0, 0, 1]), [0, 0, 0, 0, 5])
 
     def test_derivative_empty_list(self):
         """Test the derivative of an empty list (representing no polynomial)."""
         self.assertEqual(derivative([]), [])
+
+    # -------------- Phase 2 Tests -------------
+
+    def test_zero_polynomial(self):
+        self.assertEqual(derivative([0, 0, 0]), [0, 0])
+
+    def test_large_coefficients(self):
+        self.assertEqual(derivative([1000, 2000, 3000]), [2000, 6000])
+        self.assertEqual(derivative([1000000, 500000, 250000]), [500000, 500000])
 
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

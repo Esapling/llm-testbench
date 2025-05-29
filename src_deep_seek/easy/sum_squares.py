@@ -28,6 +28,25 @@ class TestSumSquares(unittest.TestCase):
     
     def test_negative_numbers(self):
         self.assertEqual(sum_squares([-2.4, 1, 1]), 6)
+        
+        #------------ Phase 2 Tests ------------
+        
+    def test_empty_list(self):
+        self.assertEqual(sum_squares([]), 0)
+
+    def test_zero_value(self):
+        self.assertEqual(sum_squares([0]), 0)
+        self.assertEqual(sum_squares([0, 0, 0]), 0)
+        self.assertEqual(sum_squares([-1, 0, 1]), 2)
+    
+    def test_large_numbers(self):
+        self.assertEqual(sum_squares([1000, 2000, 3000]), 14000000)
+        self.assertEqual(sum_squares([1e6, 2e6, 3e6]), 14000000000000)
+
+    def test_small_numbers(self):
+        self.assertEqual(sum_squares([0.1, 0.2, 0.3]), 3) # 1 + 1 + 1
+        self.assertEqual(sum_squares([0.0001, 0.0002]), 2)# 1 + 1
+
 
 if __name__ == "__main__":
     unittest.main()

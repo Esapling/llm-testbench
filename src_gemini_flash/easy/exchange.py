@@ -43,18 +43,25 @@ class TestExchange(unittest.TestCase):
         self.assertEqual(exchange([1, 3, 5], [2, 4, 6]), "YES")
         self.assertEqual(exchange([1, 3], [2, 4, 6, 8]), "YES")
 
-
     def test_exchange_not_possible(self):
         """Test case where lst1 needs odd numbers replaced but lst2 doesn't have enough evens."""
         self.assertEqual(exchange([1, 3, 5], [2, 4]), "NO")
         self.assertEqual(exchange([1, 1, 1, 1], [2, 2, 2]), "NO")
-
 
     def test_lst1_already_even(self):
         """Test case where lst1 already contains only even numbers."""
         self.assertEqual(exchange([2, 4, 6], [1, 3, 5]), "YES")
         self.assertEqual(exchange([0, 2, 8], [1, 3, 5, 7]), "YES")
 
+    #------------ Phase 2 Tests ------------
+        
+    def test_negative_numbers(self):
+        self.assertEqual(exchange([-1, -2, -3], [-41, -5, -61]), "NO")
+        self.assertEqual(exchange([-1, -2, -3], [-4, -5, -6]), "YES")
+        
+    def test_with_non_integer(self):
+        self.assertRaises(TypeError, exchange, [1.5, 2.5], [3.5, 4.5])
+        self.assertRaises(TypeError, exchange, [False, 2.5], [3.5, True])
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':

@@ -52,6 +52,19 @@ class TestSumToN(unittest.TestCase):
         """Test the case when n is 0."""
         self.assertEqual(sum_to_n(0), 0)
 
+    #----------- Phase 2 Tests -----------
+    
+    def test_negative(self):
+        self.assertEqual(sum_to_n(-5), 0)
+        self.assertEqual(sum_to_n(-1), 0)
+    
+    def test_zero(self):
+        self.assertEqual(sum_to_n(0), 0)
+
+    def test_large(self):
+        self.assertEqual(sum_to_n(10000000), 50000005000000)
+
+            
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

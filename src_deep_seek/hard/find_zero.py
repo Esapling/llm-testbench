@@ -37,11 +37,24 @@ class TestFindZero(unittest.TestCase):
         self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=2)
     
     def test_quadratic(self):
-        self.assertAlmostEqual(find_zero([-4, 0, 1]), 2.0, places=2)
+        self.assertAlmostEqual(find_zero([-4, 0, 1]), -2.0, places=2)
     
     def test_odd_coefficients(self):
         with self.assertRaises(ValueError):
             find_zero([1, 2, 3])
+            
+        # ---------- Phase 2 Tests ----------
+         
+    def test_large_coefficients(self):
+        self.assertAlmostEqual(find_zero([1000, -1000]), 1.0, places=2)
+        
+    def test_small_coefficients(self):
+        self.assertAlmostEqual(find_zero([0.001, -0.001]), 1.0, places=2)
+        
+    def test_high_degree(self):
+        self.assertAlmostEqual(find_zero([-4, -1, 0, -4, 0, -1]), -0.869, places=2)
+
+
 
 if __name__ == "__main__":
     unittest.main()

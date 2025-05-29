@@ -38,5 +38,25 @@ class TestSpecialFilter(unittest.TestCase):
     def test_mixed(self):
         self.assertEqual(specialFilter([19, 22, 33, 44, 55, 66, 77, 88, 99]), 5)
 
+    # ------------- Phase 2 Tests -------------
+    
+    def test_empty_list(self):
+        """ Test with an empty list """
+        self.assertEqual(specialFilter([]), 0)
+        
+    def test_single_element(self):
+        """ Test with a single element that meets the criteria """
+        self.assertEqual(specialFilter([11]), 1)
+        self.assertEqual(specialFilter([12]), 0)
+        
+    def test_less_than_ten(self):
+        """ Test with elements less than or equal to 10 """
+        self.assertEqual(specialFilter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), 0)
+        
+    def test_large_elements(self):
+        """ Test with large numbers to ensure correctness """
+        self.assertEqual(specialFilter([100000000, 999999, 888888]), 1)
+        
+    
 if __name__ == "__main__":
     unittest.main()

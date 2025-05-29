@@ -56,12 +56,41 @@ class TestSelectWords(unittest.TestCase):
         self.assertEqual(select_words("a e i o u", 0), ["a", "e", "i", "o", "u"])
         self.assertEqual(select_words("apple banana", 0), []) # No words with 0 consonants here
 
-
     def test_mixed_case_and_consonant_count(self):
         """Test with mixed-case words and a specific consonant count."""
         self.assertEqual(select_words("Hello World", 4), ["World"])
         self.assertEqual(select_words("PYTHON is Fun", 4), ["PYTHON"])
 
+    #------------ Phase 2 Tests ------------
+
+    def test_case_sensitivity(self):
+        self.assertEqual(select_words("Hello Programming world with Python", 3), ["Hello", "with"])
+    
+    def test_n_is_greater_than_word_length(self):
+        self.assertEqual(select_words("abc", 5), [])
+        self.assertEqual(select_words("Hello Programming world with Python", 30), [])
+    def test_n_is_negative(self):
+        self.assertEqual(select_words("Hello world", -1), [])
+        self.assertEqual(select_words("Software quality lecture is great", -2), [])
+
+    def test_inputs_with_no_matching_consonants(self):
+        self.assertEqual(select_words("Software Quality is important", 2), [])
+
+    def test_zero_consonants(self):
+        self.assertEqual(select_words("a e i", 0), ["a", "e", "i"])
+    
+    def test_inputs_with_all_matching_consonants(self):
+        self.assertEqual(select_words("abcd xayz tlmu", 3), ["abcd", "xayz", "tlmu"])
+
+    def test_inputs_with_no_consonants(self):
+        self.assertEqual(select_words("aeiou", 0), ["aeiou"])
+        self.assertEqual(select_words("AEIOU", 0), ["AEIOU"])    
+
+    def test_extremely_long_string(self):
+        long_string = "a" * 100 + "b" * 100 + "c" * 100
+        self.assertEqual(select_words(long_string, 200), ["a" * 100 + "b" * 100 + "c" * 100])
+        # self.assertEqual(select_words(long_string, 2000), [])
+        # self.assertEqual(select_words(long_string, 1500), ["a" * 1000 + "b" * 1000])
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':

@@ -28,5 +28,22 @@ class TestSortThird(unittest.TestCase):
     def test_empty_list(self):
         self.assertEqual(sort_third([]), [])
 
+    # ----------- Phase 2 Tests -----------
+
+    def test_sorted_in_divisible_by_three(self):
+        self.assertEqual(sort_third([0, 1, 2, 3, 4, 5, 6]), [0, 1, 2, 3, 4, 5, 6]) 
+
+    def test_negative_numbers(self):
+        self.assertEqual(sort_third([-1, -2, -3, -4, -5, -6]), [-4, -2, -3, -1, -5, -6])
+        self.assertEqual(sort_third([-10, -20, -30]), [-10, -20, -30])
+        
+    def test_large_numbers(self):
+        self.assertEqual(sort_third([999999999, 888888888, 777777777, 0]), [0, 888888888, 777777777, 999999999])
+        
+    def test_strings_and_numbers(self):
+        with self.assertRaises(TypeError):
+            sort_third([1, 'a', 3, 'b', 5, 'c'])
+
+
 if __name__ == "__main__":
     unittest.main()

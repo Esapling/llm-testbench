@@ -83,7 +83,7 @@ class TestNumericalLetterGrade(unittest.TestCase):
     def test_boundary_values(self):
         self.assertEqual(
             numerical_letter_grade([3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0, 0.7]),
-            ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D']
+            ['A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-']
         )
     
     def test_empty_list(self):
@@ -97,6 +97,10 @@ class TestNumericalLetterGrade(unittest.TestCase):
     
     def test_struggling_students(self):
         self.assertEqual(numerical_letter_grade([0.5, 0.3, 0.0]), ['D-', 'D-', 'E'])
+
+    # ---------- Phase 2 Tests ----------
+    
+    #All exist in the previous tests.
 
 if __name__ == "__main__":
     unittest.main()

@@ -46,6 +46,27 @@ class TestFindClosestElements(unittest.TestCase):
     def test_short_list(self):
         with self.assertRaises(ValueError):
             find_closest_elements([1.0])
+            
+        #------------ Phase 2 Tests ------------
+    
+    def test_empty_list(self):
+        with self.assertRaises(ValueError):
+            find_closest_elements([])
+
+    def test_minimal_list(self):
+        self.assertEqual(find_closest_elements([3.5, 2.0]), (2.0, 3.5))
+
+    def test_large_numbers2(self):
+        self.assertEqual(find_closest_elements([1000000, 1000001, 1000002]), (1000000, 1000001))
+       
+    def test_not_enough_numeric(self):
+        with self.assertRaises(TypeError):
+            find_closest_elements([1, "a"])
+        with self.assertRaises(TypeError):
+            find_closest_elements(["b", 'a', "cat", "dog"])
+
+    def test_mixed_types(self):
+        self.assertEqual(find_closest_elements([1, "a", 3]), (1, 3))
 
 if __name__ == "__main__":
     unittest.main()

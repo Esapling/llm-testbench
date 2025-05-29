@@ -5,7 +5,38 @@
 */
 """
 import unittest
-from fibfib import fibfib
+
+def fibfib(n: int) -> int:
+    """The FibFib number sequence is a sequence similar to the Fibonacci sequence that's defined as follows:
+    fibfib(0) == 0
+    fibfib(1) == 0
+    fibfib(2) == 1
+    fibfib(n) == fibfib(n-1) + fibfib(n-2) + fibfib(n-3).
+    Please write a function to efficiently compute the n-th element of the fibfib number sequence.
+    >>> fibfib(1)
+    0
+    >>> fibfib(5)
+    4
+    >>> fibfib(8)
+    24
+    """
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    
+    # Base cases
+    if n == 0 or n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    
+    # For n >= 3, use iterative approach to avoid recursion
+    a, b, c = 0, 0, 1  # fibfib(0), fibfib(1), fibfib(2)
+    
+    for i in range(3, n + 1):
+        next_val = a + b + c
+        a, b, c = b, c, next_val
+    
+    return c
 
 class TestFibFib(unittest.TestCase):
     
@@ -41,6 +72,18 @@ class TestFibFib(unittest.TestCase):
         """Test that the function raises an error for negative inputs."""
         with self.assertRaises(ValueError):
             fibfib(-1)
+
+    # -------------- Phase 2 Tests -------------
+
+    def test_non_integer_n(self):
+        with self.assertRaises(TypeError):
+            fibfib(5.5)
+        with self.assertRaises(TypeError):
+            fibfib("string")
+        with self.assertRaises(TypeError):
+            fibfib([1, 2, 3])
+        with self.assertRaises(TypeError):
+            fibfib(None)
 
 if __name__ == '__main__':
     unittest.main()

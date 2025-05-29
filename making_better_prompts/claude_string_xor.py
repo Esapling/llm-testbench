@@ -1,10 +1,5 @@
-"""
-/* @Authors
-* Student Names: Enes Fidan, Yunus Emre Bayraktar 
-* Student IDs: 150200713, 150200020 
-*/
-"""
 from typing import List
+import unittest
 
 
 def string_xor(a: str, b: str) -> str:
@@ -13,18 +8,32 @@ def string_xor(a: str, b: str) -> str:
     >>> string_xor('010', '110')
     '100'
     """
-    # Ensure both strings are of equal length by padding the shorter one
+    # Handle empty string cases
+    if not a and not b:
+        return ""
+    if not a:
+        return b
+    if not b:
+        return a
+    
+    # Determine the maximum length for padding
     max_len = max(len(a), len(b))
-    a = a.zfill(max_len)
-    b = b.zfill(max_len)
     
-    # Perform XOR operation bit by bit
-    result = ''
+    # Pad strings from the right (append zeros to make them equal length)
+    a_padded = a.ljust(max_len, '0')
+    b_padded = b.ljust(max_len, '0')
+    
+    # Perform XOR operation character by character
+    result = []
     for i in range(max_len):
-        # XOR is 1 if bits are different, 0 if they are the same
-        result += '1' if a[i] != b[i] else '0'
+        # XOR: same bits give 0, different bits give 1
+        if a_padded[i] == b_padded[i]:
+            result.append('0')
+        else:
+            result.append('1')
     
-    return result
+    return ''.join(result)
+
 
 
 # Unit tests
@@ -67,6 +76,10 @@ class TestStringXOR(unittest.TestCase):
         self.assertEqual(string_xor('10101010', '10101010'), '00000000')
 
     
-
-if __name__ == "__main__":
+if __name__ == '__main__':
+    # Run the doctests first
+    import doctest
+    doctest.testmod()
+    
+    # Then run the unit tests
     unittest.main()

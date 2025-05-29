@@ -47,10 +47,27 @@ class TestSumSquares(unittest.TestCase):
         self.assertEqual(sum_squares([]), 0)
     
     def test_large_decimal(self):
-        self.assertEqual(sum_squares([3.999, 5.001]), 34)  # ceil(3.999)^2 + ceil(5.001)^2 = 4^2 + 6^2 = 16 + 36 = 52
+        self.assertEqual(sum_squares([3.999, 5.001]), 52)  # ceil(3.999)^2 + ceil(5.001)^2 = 4^2 + 6^2 = 16 + 36 = 52
     
     def test_large_negative(self):
         self.assertEqual(sum_squares([-10.9]), 100)  # ceil(-10.9)^2 = (-10)^2 = 100
+
+        #------------ Phase 2 Tests ------------
+    
+    def test_zero_value(self):
+        self.assertEqual(sum_squares([0]), 0)
+        self.assertEqual(sum_squares([0, 0, 0]), 0)
+        self.assertEqual(sum_squares([-1, 0, 1]), 2)
+    
+    def test_large_numbers(self):
+        self.assertEqual(sum_squares([1000, 2000, 3000]), 14000000)
+        self.assertEqual(sum_squares([1e6, 2e6, 3e6]), 14000000000000)
+
+    def test_small_numbers(self):
+        self.assertEqual(sum_squares([0.1, 0.2, 0.3]), 3) # 1 + 1 + 1
+        self.assertEqual(sum_squares([0.0001, 0.0002]), 2)# 1 + 1
+
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -49,6 +49,19 @@ class TestPoly(unittest.TestCase):
         # At x = 2.5: 0*2.5^0 + 0*2.5^1 + 1*2.5^2 = 6.25
         self.assertEqual(poly([0, 0, 1], 2.5), 6.25)
 
+       # ---------- Phase 2 Tests ----------
+         
+    def test_large_coefficients(self):
+        self.assertAlmostEqual(poly([1000, -1000], 1.0), 1.0, places=2)
+        
+    def test_small_coefficients(self):
+        self.assertAlmostEqual(poly([0.001, -0.001], 1.0), 1.0, places=2)
+        
+    def test_high_degree(self):
+        self.assertAlmostEqual(poly([-4, -1, 0, -4, 0, -1], -0.869), -0.869, places=2)
+
+
+
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

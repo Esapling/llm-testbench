@@ -46,12 +46,21 @@ class TestNumericalLetterGrade(unittest.TestCase):
     def test_all_grades(self):
         test_grades = [4.0, 3.8, 3.5, 3.2, 3.0, 2.8, 2.5, 2.2, 2.0, 
                       1.8, 1.5, 1.2, 1.0, 0.8, 0.5, 0.0]
-        expected = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 
-                    'D+', 'D', 'D-', 'E', 'E', 'E', 'E']
+        expected = ['A+', 'A', 'A-', 'B+', 'B', 'B', 'B-', 'C+', 'C', 
+                    'C', 'C-', 'D+', 'D', 'D', 'D-', 'E']
         self.assertEqual(numerical_letter_grade(test_grades), expected)
     
     def test_empty(self):
         self.assertEqual(numerical_letter_grade([]), [])
+
+    # ---------- Phase 2 Tests ----------
+
+    def test_boundary_values(self):
+        self.assertEqual(
+            numerical_letter_grade([3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0, 0.7]),
+            ['A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-']
+        )
+        
 
 if __name__ == "__main__":
     unittest.main()

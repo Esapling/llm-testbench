@@ -41,5 +41,12 @@ class TestSortArray(unittest.TestCase):
         self.assertEqual(arr, [3, 1, 2])
         self.assertIsNot(arr, sorted_arr)
 
+ # --------- Phase 2 Tests ---------
+ 
+    def test_large_numbers(self):
+        """ Test with large numbers to ensure sorting works correctly """
+        self.assertEqual(sort_array([100000000, 999999, 888888]), [100000000, 999999, 888888])
+        self.assertEqual(sort_array([1000000, 5000000, 200000000]), [200000000, 5000000, 1000000])
+    
 if __name__ == "__main__":
     unittest.main()

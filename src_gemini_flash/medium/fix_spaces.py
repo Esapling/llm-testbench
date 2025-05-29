@@ -74,6 +74,13 @@ class TestFixSpaces(unittest.TestCase):
         self.assertEqual(fix_spaces("trailing three   "), "trailing_three-")
         self.assertEqual(fix_spaces("a     b"), "a-b") # 5 spaces
 
+    # --------------- Phase 2 Tests --------------
+    
+    def test_only_spaces(self):
+        self.assertEqual(fix_spaces('   '), '-')
+        self.assertEqual(fix_spaces('      '), '-')
+        self.assertEqual(fix_spaces(' '), '_')
+
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

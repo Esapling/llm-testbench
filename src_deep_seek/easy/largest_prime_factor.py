@@ -48,5 +48,16 @@ class TestLargestPrimeFactor(unittest.TestCase):
     def test_product_of_multiple_primes(self):
         self.assertEqual(largest_prime_factor(2*3*5*7), 7)
 
+    #--------------Phase 2 Tests--------------
+        
+    def test_smallest_non_prime(self):
+        self.assertEqual(largest_prime_factor(4), 2)
+
+    def test_large_number(self):
+        self.assertEqual(largest_prime_factor(600851475143), 6857)
+
+    def test_floating_point(self):
+        self.assertTrue(largest_prime_factor(20.0))
+
 if __name__ == "__main__":
     unittest.main()

@@ -51,5 +51,19 @@ class TestDerivative(unittest.TestCase):
     def test_mixed_coefficients(self):
         self.assertEqual(derivative([10, -5, 0, 7, -2]), [-5, 0, 21, -8])
 
+    # -------------- Phase 2 Tests -------------
+    def test_empty_list(self):
+        self.assertEqual(derivative([]), [])
+        
+    def test_zero_polynomial(self):
+        self.assertEqual(derivative([0, 0, 0]), [0, 0])
+    
+    def test_high_degree(self):
+        self.assertEqual(derivative([2, 3, 4, 5, 7, 15, 6]), [3, 8, 15, 28, 75, 36])
+        
+    def test_large_coefficients(self):
+        self.assertEqual(derivative([1000, 2000, 3000]), [2000, 6000])
+        self.assertEqual(derivative([1000000, 500000, 250000]), [500000, 500000])
+
 if __name__ == "__main__":
     unittest.main()

@@ -59,7 +59,15 @@ class TestIsNested(unittest.TestCase):
         self.assertEqual(is_nested('[['), False)
         self.assertEqual(is_nested(']]'), False)
         self.assertEqual(is_nested('[[['), False) # Test with more open brackets
+# ---------------- Phase 2 Tests ----------------
 
+    def test_complex_nested(self):
+        """ Test complex nested structures """
+        self.assertTrue(is_nested('[[[[]]]]'))
+        self.assertTrue(is_nested('[[][][[]]]'))
+        self.assertFalse(is_nested('[[[]]][]]'))
+    
+        
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':
