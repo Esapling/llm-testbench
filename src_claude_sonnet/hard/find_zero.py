@@ -84,5 +84,16 @@ class TestFindZero(unittest.TestCase):
         result = find_zero([-16, 0, 0, 0, 1])
         self.assertTrue(abs(abs(result) - 2.0) < 1e-5)
 
+    # ---------- Phase 2 Tests ----------
+         
+    def test_large_coefficients(self):
+        self.assertAlmostEqual(find_zero([1000, -1000]), 1.0, places=2)
+        
+    def test_small_coefficients(self):
+        self.assertAlmostEqual(find_zero([0.001, -0.001]), 1.0, places=2)
+        
+    def test_high_degree(self):
+        self.assertAlmostEqual(find_zero([-4, -1, 0, -4, 0, -1]), -0.869, places=2)
+
 if __name__ == "__main__":
     unittest.main()

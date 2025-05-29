@@ -40,7 +40,7 @@ class TestStringXOR(unittest.TestCase):
         self.assertEqual(string_xor('0000', '0000'), '0000')
     
     def test_different_length_strings(self):
-        self.assertEqual(string_xor('1', '0101'), '1101')
+        self.assertEqual(string_xor('1', '0101'), '1101') # 1000 0101 -> 1101 | 0001 0101 -> 0100
         self.assertEqual(string_xor('111', '1'), '110')
         self.assertEqual(string_xor('', '1010'), '1010')
     
