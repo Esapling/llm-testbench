@@ -88,5 +88,16 @@ class TestPluck(unittest.TestCase):
     def test_larger_array(self):
         self.assertEqual(pluck([101, 99, 51, 8, 24, 36, 2, 3, 5, 7, 2]), [2, 6])
 
+        
+    # ---------- Phase 2 Tests ----------
+
+    def test_large_numbers(self):
+        self.assertEqual(pluck([100000000, 5000000, 200000000]), [5000000, 1])
+
+    def test_strings_in_list(self):
+        with self.assertRaises(TypeError):
+            pluck([1, 'two', 3])
+            
+
 if __name__ == "__main__":
     unittest.main()
