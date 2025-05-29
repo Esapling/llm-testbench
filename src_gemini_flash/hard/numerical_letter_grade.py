@@ -67,12 +67,12 @@ class TestNumericalLetterGrade(unittest.TestCase):
     def test_example_case(self):
         """Test the example case from the docstring."""
         # Corrected expected output based on the provided grading table
-        self.assertEqual(numerical_letter_grade([4.0, 3.0, 1.7, 2.0, 3.5]), ['A+', 'B+', 'C', 'C+', 'A-'])
+        self.assertEqual(numerical_letter_grade([4.0, 3.0, 1.7, 2.0, 3.5]), ['A+', 'B', 'C-', 'C', 'A-'])
 
     def test_boundary_cases(self):
         """Test values at or near the boundaries of the grade ranges."""
         self.assertEqual(numerical_letter_grade([3.7, 3.75, 3.3, 3.35, 3.0, 3.05, 0.0, 0.05]),
-                         ['D', 'A', 'D+', 'A-', 'D+', 'B+', 'E', 'D-']) # Corrected based on > thresholds
+                         ['A-', 'A', 'B+', 'A-', 'B', 'B+', 'E', 'D-']) # Corrected based on > thresholds
 
     def test_all_grade_categories(self):
         """Test inputs that should result in each possible letter grade."""
@@ -86,7 +86,12 @@ class TestNumericalLetterGrade(unittest.TestCase):
     def test_grades_on_thresholds(self):
         """Test grades that are exactly on the '>' thresholds."""
         self.assertEqual(numerical_letter_grade([3.7, 3.3, 3.0, 2.7, 2.3, 2.0, 1.7, 1.3, 1.0, 0.7, 0.0]),
-                         ['D', 'D+', 'D+', 'C', 'C-', 'C+', 'C', 'C-', 'D+', 'D', 'E']) # Corrected expected based on >
+                         ['A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'E'])
+
+    # ---------- Phase 2 Tests ----------
+    
+    #All exist in the previous tests.
+
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':
