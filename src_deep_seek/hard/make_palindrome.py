@@ -57,7 +57,6 @@ class TestMakePalindrome(unittest.TestCase):
         self.assertEqual(make_palindrome('Level'), 'LeveleveL')
 
     def test_long_strings(self):
-        
         self.assertEqual(make_palindrome('abcdefgh'), 'abcdefghgfedcba')
         self.assertEqual(make_palindrome('a' * 1000), 'a' * 1000)
         long_palindrome ="saippuakivikauppias"

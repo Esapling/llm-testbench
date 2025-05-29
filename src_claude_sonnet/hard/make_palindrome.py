@@ -35,7 +35,6 @@ def make_palindrome(string: str) -> str:
     return string + string[:-1][::-1]
 
 
-# Unit tests
 import unittest
 
 class TestMakePalindrome(unittest.TestCase):

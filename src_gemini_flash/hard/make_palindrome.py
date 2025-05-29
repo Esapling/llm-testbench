@@ -91,6 +91,5 @@ class TestMakePalindrome(unittest.TestCase):
         self.assertEqual(make_palindrome(long_palindrome[:-3]), long_palindrome)
 
 
-# This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
