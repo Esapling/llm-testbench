@@ -29,5 +29,44 @@ class Test(unittest.TestCase):
     def test_palindrome(self):
         self.assertEqual(make_palindrome('racecar'), 'racecar')
 
+    #### PHASE 2 Tests ####
+    def test_single_character(self):
+        self.assertEqual(make_palindrome('a'), 'a')
+        self.assertEqual(make_palindrome('l'), 'l')
+        self.assertEqual(make_palindrome(' '), ' ')
+
+    def test_already_palindrome(self):
+        self.assertEqual(make_palindrome('madam'), 'madam')
+        self.assertEqual(make_palindrome('level'), 'level')
+        self.assertEqual(make_palindrome('noon'), 'noon')
+    
+    def test_two_characters(self):
+        self.assertEqual(make_palindrome('ab'), 'aba')
+        self.assertEqual(make_palindrome('aa'), 'aa')
+        self.assertEqual(make_palindrome('zy'), 'zyz')
+
+    def test_strings_with_palindromic_suffixes(self):
+        self.assertEqual(make_palindrome('madama'), 'madamadam')
+        self.assertEqual(make_palindrome('rotavatorot'), 'rotavatorotavator')
+    def test_strings_with_no_palindromic_suffixes(self):
+        self.assertEqual(make_palindrome('hello'), 'hellolleh')
+        self.assertEqual(make_palindrome('world'), 'worldlrow')
+
+    def test_strings_with_special_characters(self):
+        self.assertEqual(make_palindrome('a!b!c'), 'a!b!c!b!a')
+        self.assertEqual(make_palindrome('race@car'), 'race@carac@ecar')
+
+    def test_case_sensitivity(self):
+        self.assertEqual(make_palindrome('Racecar'), 'RacecaracecaR')
+        self.assertEqual(make_palindrome('Level'), 'LeveleveL')
+
+    def test_long_strings(self):
+        
+        self.assertEqual(make_palindrome('abcdefgh'), 'abcdefghgfedcba')
+        self.assertEqual(make_palindrome('a' * 1000), 'a' * 1000)
+        long_palindrome ="saippuakivikauppias"
+        self.assertEqual(make_palindrome(long_palindrome[:-3]), long_palindrome)
+
+
 if __name__ == "__main__":
     unittest.main()
