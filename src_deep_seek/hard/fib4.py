@@ -37,5 +37,24 @@ class TestFib4(unittest.TestCase):
     def test_larger_n(self):
         self.assertEqual(fib4(10), 104)
 
+    # -------------- Phase 2 Tests -------------
+    
+    def test_n_equals_4(self):
+        self.assertEqual(fib4(4), 2)
+
+    def test_negative_n(self):
+        with self.assertRaises(ValueError):
+            fib4(-1)
+            
+    def test_non_integer_n(self):
+        with self.assertRaises(TypeError):
+            fib4(5.5)
+        with self.assertRaises(TypeError):
+            fib4("string")
+        with self.assertRaises(TypeError):
+            fib4([1, 2, 3])
+        with self.assertRaises(TypeError):
+            fib4(None)
+
 if __name__ == "__main__":
     unittest.main()

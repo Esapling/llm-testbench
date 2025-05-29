@@ -41,5 +41,13 @@ class TestFileNameCheck(unittest.TestCase):
     def test_invalid_extension(self):
         self.assertEqual(file_name_check("file.doc"), 'No')
 
+        # -------------- Phase 2 Tests --------------
+    
+    def test_empty_name(self):
+        self.assertEqual(file_name_check('.txt'), 'No')
+        self.assertEqual(file_name_check('file.'), 'No')
+        self.assertEqual(file_name_check('.'), 'No')
+
+
 if __name__ == "__main__":
     unittest.main()

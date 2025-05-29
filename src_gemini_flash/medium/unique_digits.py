@@ -60,6 +60,19 @@ class TestUniqueDigits(unittest.TestCase):
         self.assertEqual(unique_digits([13, 24, 57, 80, 91, 13]), [13, 13, 57, 91])
         self.assertEqual(unique_digits([22, 44, 11, 66, 33, 88]), [11, 33])
 
+# ------------- Phase 2 Tests -------------
+
+    def test_large_numbers(self):
+        # Large numbers with only odd digits
+        self.assertEqual(unique_digits([1357913579]), [1357913579])
+        self.assertEqual(unique_digits([999999999]), [999999999])
+        
+    def test_sorting_order(self):
+        self.assertEqual(unique_digits([97, 13, 755, 31, 1]), [1, 13, 31, 97, 755])
+        self.assertEqual(unique_digits([99, 77, 55, 33, 11]), [11, 33, 55, 77, 99])
+        
+    def test_all_even(self):
+        self.assertEqual(unique_digits([2, 4, 6, 8, 20]), [])
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':

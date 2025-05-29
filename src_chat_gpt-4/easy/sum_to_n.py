@@ -17,6 +17,19 @@ class TestSumToN(unittest.TestCase):
     def test_small(self):
         self.assertEqual(sum_to_n(5), 15)
         self.assertEqual(sum_to_n(1), 1)
+        
+    #----------- Phase 2 Tests -----------
+    
+    def test_negative(self):
+        self.assertEqual(sum_to_n(-5), 0)
+        self.assertEqual(sum_to_n(-1), 0)
+    
+    def test_zero(self):
+        self.assertEqual(sum_to_n(0), 0)
+
+    def test_large_numbers(self):
+        self.assertEqual(sum_to_n(10000000), 50000005000000)
+
 
 if __name__ == "__main__":
     unittest.main()

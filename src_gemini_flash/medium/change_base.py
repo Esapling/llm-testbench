@@ -54,7 +54,35 @@ class TestChangeBase(unittest.TestCase):
         self.assertEqual(change_base(100, 8), '144') # 1*8^2 + 4*8^1 + 4*8^0 = 64 + 32 + 4 = 100
         self.assertEqual(change_base(27, 3), '1000') # 1*3^3 + 0*3^2 + 0*3^1 + 0*3^0 = 27
 
-
+    # ----------- Phase 2 Tests -----------
+    
+    def test_large_numbers(self):
+        self.assertEqual(change_base(1000000, 2), '11110100001001000000')
+         
+    def test_negative_numbers(self):
+        with self.assertRaises(ValueError):
+            change_base(-100, 5)
+    
+    def test_floating_point_input(self):
+        with self.assertRaises(TypeError):
+            change_base(10.5, 2)
+        
+    def test_non_integer_input(self):
+        with self.assertRaises(TypeError):
+            change_base("abc!", 6)
+        with self.assertRaises(TypeError):
+            change_base([10], 2)
+       
+    def test_zero_base(self):
+        with self.assertRaises(ValueError):
+            change_base(100, 0)
+    
+    '''
+    def test_base_one(self):
+        with self.assertRaises(ValueError):
+            change_base(100, 1)
+    '''
+    
 # This allows running the tests directly from the script
 if __name__ == '__main__':
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

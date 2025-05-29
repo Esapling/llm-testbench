@@ -30,11 +30,19 @@ class TestFlipCase(unittest.TestCase):
 
     def test_mixed_case_with_non_letters(self):
         """Test with a string containing mixed-case letters and other characters."""
-        self.assertEqual(flip_case('MiXeD cAsE 123 !'), 'mIXeD CaSe 123 !')
+        self.assertEqual(flip_case('MiXeD cAsE 123 !'), 'mIxEd CaSe 123 !')
 
     def test_empty_string(self):
         """Test with an empty input string."""
         self.assertEqual(flip_case(''), '')
+
+    # ------------- Phase 2 Tests -------------
+    
+    def test_unicode_characters(self):
+        self.assertEqual(flip_case('Hello, 世界!'), 'hELLO, 世界!')
+        self.assertEqual(flip_case('¡Hola! ¿Cómo estás?'), '¡hOLA! ¿cÓMO ESTÁS?')
+
+
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':

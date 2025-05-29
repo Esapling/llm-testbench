@@ -54,5 +54,17 @@ class TestSpecialFilter(unittest.TestCase):
     def test_large_numbers(self):
         self.assertEqual(specialFilter([111, 222, 333, 444, 555]), 3)  # 111, 333, 555 meet criteria
 
+    # ------------- Phase 2 Tests -------------
+    
+    def test_single_element(self):
+        """ Test with a single element that meets the criteria """
+        self.assertEqual(specialFilter([11]), 1)
+        self.assertEqual(specialFilter([12]), 0)
+        
+    def test_large_elements(self):
+        """ Test with large numbers to ensure correctness """
+        self.assertEqual(specialFilter([100000000, 999999, 888888]), 1)
+    
+
 if __name__ == "__main__":
     unittest.main()

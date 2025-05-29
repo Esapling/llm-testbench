@@ -53,13 +53,29 @@ class TestFib4(unittest.TestCase):
         self.assertEqual(fib4(7), 14)
     
     def test_additional_cases(self):
-        self.assertEqual(fib4(4), 2)  # 0 + 0 + 2 + 0 = 2
-        self.assertEqual(fib4(8), 28)  # 0 + 2 + 4 + 8 = 14
-        self.assertEqual(fib4(9), 52)  # 2 + 4 + 8 + 14 = 28
+        self.assertEqual(fib4(4), 2)
+        self.assertEqual(fib4(8), 28) 
+        self.assertEqual(fib4(9), 54)  
     
     def test_larger_values(self):
-        self.assertEqual(fib4(10), 96)
-        self.assertEqual(fib4(15), 5768)
+        self.assertEqual(fib4(10), 104)
+        self.assertEqual(fib4(15), 2764)
+
+    # -------------- Phase 2 Tests -------------
+
+    def test_negative_n(self):
+        with self.assertRaises(ValueError):
+            fib4(-1)
+            
+    def test_non_integer_n(self):
+        with self.assertRaises(TypeError):
+            fib4(5.5)
+        with self.assertRaises(TypeError):
+            fib4("string")
+        with self.assertRaises(TypeError):
+            fib4([1, 2, 3])
+        with self.assertRaises(TypeError):
+            fib4(None)
 
 if __name__ == "__main__":
     unittest.main()

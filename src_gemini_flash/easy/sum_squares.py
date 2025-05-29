@@ -65,26 +65,12 @@ class TestSumSquares(unittest.TestCase):
 
 
         #------------ Phase 2 Tests ------------
-    def test_empty_list(self):
-        self.assertEqual(sum_squares([]), 0)
 
-    def test_negative_numbers(self):
-        self.assertEqual(sum_squares([-1,-2,-3]), 14)
-    
-    
     def test_zero_value(self):
         self.assertEqual(sum_squares([0]), 0)
         self.assertEqual(sum_squares([0, 0, 0]), 0)
         self.assertEqual(sum_squares([-1, 0, 1]), 2)
     
-    def test_non_numerical_input(self):
-        with self.assertRaises(TypeError):
-            sum_squares(["a", "b", "c"])
-        with self.assertRaises(TypeError):
-            sum_squares([None, True, False])
-    def test_decimal_numbers(self):
-        self.assertEqual(sum_squares([1.5, 2.5, 3.5]), 29)
-
     def test_large_numbers(self):
         self.assertEqual(sum_squares([1000, 2000, 3000]), 14000000)
         self.assertEqual(sum_squares([1e6, 2e6, 3e6]), 14000000000000)

@@ -80,6 +80,20 @@ class TestSortArray(unittest.TestCase):
         # First=5, Last=5, Sum=10 (even)
         self.assertEqual(sort_array([5, 1, 5]), [5, 5, 1])
 
+    # --------- Phase 2 Tests ---------
+      
+    def test_large_numbers(self):
+        """ Test with large numbers to ensure sorting works correctly """
+        self.assertEqual(sort_array([100000000, 999999, 888888]), [100000000, 999999, 888888])
+        self.assertEqual(sort_array([1000000, 5000000, 200000000]), [200000000, 5000000, 1000000])
+    
+    def test_original_array_unchanged(self):
+        """ Ensure the original array is not modified """
+        original = [2, 4, 3, 0, 1, 5]
+        original_copy = original.copy()
+        sorted_array = sort_array(original)
+        self.assertEqual(original, original_copy)
+
 
 # This allows running the tests directly from the script
 if __name__ == '__main__':

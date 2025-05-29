@@ -26,5 +26,16 @@ class TestFlipCase(unittest.TestCase):
     def test_with_numbers(self):
         self.assertEqual(flip_case('Hello123'), 'hELLO123')
 
+        # ------------- Phase 2 Tests -------------
+    
+    def test_empty_string(self):
+        self.assertEqual(flip_case(''), '')
+
+    def test_unicode_characters(self):
+        self.assertEqual(flip_case('Hello, 世界!'), 'hELLO, 世界!')
+        self.assertEqual(flip_case('¡Hola! ¿Cómo estás?'), '¡hOLA! ¿cÓMO ESTÁS?')
+
+
+
 if __name__ == "__main__":
     unittest.main()

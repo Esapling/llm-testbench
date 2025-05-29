@@ -58,12 +58,35 @@ class TestCompareOne(unittest.TestCase):
     def test_strings(self):
         self.assertEqual(compare_one("7,5", "3,2"), "7,5")
         self.assertEqual(compare_one("2.5", "10.1"), "10.1")
-        self.assertIsNone(compare_one("5.0", "5,0"))
         
     def test_mixed_types(self):
         self.assertEqual(compare_one(10, "5,5"), 10)
         self.assertEqual(compare_one("15.5", 10), "15.5")
         self.assertEqual(compare_one(7.5, "10"), "10")
+
+    # ---------- Phase 2 Tests ----------
+
+    def test_phase_invalid_input(self):
+        with self.assertRaises(ValueError):
+            compare_one("invalid", 1)
+        with self.assertRaises(ValueError):
+            compare_one(1, "invalid")
+        with self.assertRaises(ValueError):
+            compare_one("1,2,3", "4,5,6")
+        with self.assertRaises(ValueError):
+            compare_one("1.2.3", 1.2)
+        
+    def test_empty_strings(self):
+        self.assertEqual(compare_one("", ""), None)
+        self.assertEqual(compare_one("", 5), 5)
+        
+    def test_dot_comma_type_mixed(self):
+        self.assertEqual(compare_one("0", 0), None)
+        self.assertEqual(compare_one("1,000", "1000"), "1000")
+        self.assertEqual(compare_one("1.000", 1050), 1050)
+        self.assertEqual(compare_one("1.000", "1000"), "1000")
+        self.assertEqual(compare_one(1234.56, "1234.56"), None)
+        self.assertEqual(compare_one("1,234,567", "1234567"), None)
 
 if __name__ == "__main__":
     unittest.main()

@@ -75,5 +75,11 @@ class TestFileNameCheck(unittest.TestCase):
     def test_empty_name(self):
         self.assertEqual(file_name_check(".txt"), 'No')
 
+    # -------------- Phase 2 Tests --------------
+
+    def test_no_dot(self):
+        self.assertEqual(file_name_check('filetxt'), 'No')
+        self.assertEqual(file_name_check('file'), 'No')
+
 if __name__ == "__main__":
     unittest.main()

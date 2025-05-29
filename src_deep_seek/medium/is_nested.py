@@ -43,5 +43,19 @@ class TestIsNested(unittest.TestCase):
     def test_example6(self):
         self.assertTrue(is_nested('[[]][['))
 
+    # ---------------- Phase 2 Tests ----------------
+
+    def test_empty_string(self):
+        """ Test empty string case """
+        self.assertFalse(is_nested(''))
+    
+    def test_complex_nested(self):
+        """ Test complex nested structures """
+        self.assertTrue(is_nested('[[[[]]]]'))
+        self.assertTrue(is_nested('[[][][[]]]'))
+        self.assertFalse(is_nested('[[[]]][]]'))
+    
+        
+
 if __name__ == "__main__":
     unittest.main()
