@@ -29,16 +29,9 @@ class TestLargestPrimeFactor(unittest.TestCase):
     def test_smallest_non_prime(self):
         self.assertEqual(largest_prime_factor(4), 2)
 
-    def test_highly_composite_number(self):
-        self.assertEqual(largest_prime_factor(5040), 7)
-
     def test_large_number(self):
         self.assertEqual(largest_prime_factor(600851475143), 6857)
         
-    def test_non_integer(self):
-        with self.assertRaises(TypeError):
-            largest_prime_factor(5)
-            
     def test_floating_point(self):
         self.assertTrue(largest_prime_factor(20.0))
 

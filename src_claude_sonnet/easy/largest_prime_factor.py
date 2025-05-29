@@ -49,5 +49,14 @@ class TestLargestPrimeFactor(unittest.TestCase):
     def test_small_composite(self):
         self.assertEqual(largest_prime_factor(10), 5)  # 2 * 5
 
+        #--------------Phase 2 Tests--------------
+        
+    def test_smallest_non_prime(self):
+        self.assertEqual(largest_prime_factor(4), 2)
+
+    def test_floating_point(self):
+        self.assertTrue(largest_prime_factor(20.0))
+
+
 if __name__ == "__main__":
     unittest.main()
