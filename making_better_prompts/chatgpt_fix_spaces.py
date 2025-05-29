@@ -1,43 +1,13 @@
-"""
-/* @Authors
-* Student Names: Enes Fidan, Yunus Emre Bayraktar 
-* Student IDs: 150200713, 150200020 
-*/
-"""
-def fix_spaces(text):
-    """
-    Given a string text, replace all spaces in it with underscores, 
-    and if a string has more than 2 consecutive spaces, 
-    then replace all consecutive spaces with - 
-    
-    fix_spaces("Example") == "Example"
-    fix_spaces("Example 1") == "Example_1"
-    fix_spaces(" Example 2") == "_Example_2"
-    fix_spaces(" Example   3") == "_Example-3"
-    """
-    result = ""
-    i = 0
-    
-    while i < len(text):
-        if text[i] == " ":
-            # Count consecutive spaces
-            space_count = 0
-            while i < len(text) and text[i] == " ":
-                space_count += 1
-                i += 1
-                
-            # Replace spaces based on count
-            if space_count > 2:
-                result += "-"
-            else:
-                result += "_" * space_count
-        else:
-            result += text[i]
-            i += 1
-    
-    return result
-
+import re
 import unittest
+import re
+
+def fix_spaces(text):
+    # First, replace all groups of 3 or more spaces with a dash
+    text = re.sub(r' {3,}', '-', text)
+    # Then, replace every single space with an underscore
+    text = text.replace(' ', '_')
+    return text
 
 class TestFixSpaces(unittest.TestCase):
     def test_examples(self):

@@ -1,43 +1,28 @@
-"""
-/* @Authors
-* Student Names: Enes Fidan, Yunus Emre Bayraktar 
-* Student IDs: 150200713, 150200020 
-*/
-"""
+import unittest
+
 def fix_spaces(text):
-    """
-    Given a string text, replace all spaces in it with underscores, 
-    and if a string has more than 2 consecutive spaces, 
-    then replace all consecutive spaces with - 
+    if not text:
+        return text
     
-    fix_spaces("Example") == "Example"
-    fix_spaces("Example 1") == "Example_1"
-    fix_spaces(" Example 2") == "_Example_2"
-    fix_spaces(" Example   3") == "_Example-3"
-    """
-    result = ""
+    result = []
     i = 0
+    n = len(text)
     
-    while i < len(text):
-        if text[i] == " ":
-            # Count consecutive spaces
-            space_count = 0
-            while i < len(text) and text[i] == " ":
-                space_count += 1
+    while i < n:
+        if text[i] == ' ':
+            start = i
+            while i < n and text[i] == ' ':
                 i += 1
-                
-            # Replace spaces based on count
-            if space_count > 2:
-                result += "-"
+            count = i - start
+            if count > 2:
+                result.append('-')
             else:
-                result += "_" * space_count
+                result.append('_' * count)
         else:
-            result += text[i]
+            result.append(text[i])
             i += 1
     
-    return result
-
-import unittest
+    return ''.join(result)
 
 class TestFixSpaces(unittest.TestCase):
     def test_examples(self):
@@ -63,7 +48,7 @@ class TestFixSpaces(unittest.TestCase):
         self.assertEqual(fix_spaces("Hello   "), "Hello-")
         
     def test_mixed_spaces(self):
-        self.assertEqual(fix_spaces(" Hello  World   !"), "_Hello__World-!")
+        self.assertEqual(fix_spaces(" Hello  World   !"), "_Hello__World-!") # two spaces 
 
     # --------------- Phase 2 Tests --------------
 
